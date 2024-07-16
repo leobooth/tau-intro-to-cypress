@@ -1,0 +1,17 @@
+Terminal commands 
+=================
+
+node -v
+* check what version of Node is installed
+
+npm init
+* initialize a Node project in the current folder
+
+npm init -y
+* initialize a Node project and say accept all configuration defaults
+
+npm install cypress
+* install Cypress and its dependencies into the current Node project
+
+npx cypress open
+* open Cypress in UI mode

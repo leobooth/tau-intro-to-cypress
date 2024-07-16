@@ -5,8 +5,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    // baseUrl: 'http://localhost:3000',
+    // baseUrl: 'https://todomvc.com/examples/react/dist/',
     // viewportHeight: 550,
     // viewportWidth: 660
+    experimentalStudio: true
   },
 });
