@@ -7,7 +7,8 @@ module.exports = defineConfig({
     },
     // baseUrl: 'https://todomvc.com/examples/react/dist/',
     // viewportHeight: 550,
-    // viewportWidth: 660
-    experimentalStudio: true
+    // viewportWidth: 660,
+    // defaultCommandTimeout: 6000,
+    experimentalStudio: true,
   },
 });
