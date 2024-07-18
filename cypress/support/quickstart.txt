@@ -15,9 +15,15 @@ npm install cypress
 
 npx cypress open
 * open Cypress in UI mode
+* allows you to create default files for Cypress e2e or component testing
 
 npx cypress run
 * run Cypress in headless mode
+
+cypress.config.js
+    e2e
+        experimentalStudio: true
+        * allows use of Cypress selector playground to find selectors
 
 command line options:
     --browser [name of browser]
