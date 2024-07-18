@@ -86,7 +86,8 @@ it('completed todo item label has text decoration \'line-through\'', () => {
     clearCompletedTodos();
 });
 
-it.only('changes checkbox search timeout to 6 seconds', () => {
+// to change timeouts globally, set 'defaultCommandTimeout' key-value in cypress.config.js 
+it('changes checkbox search timeout locally to 6 seconds', () => {
     cy.visit('https://todomvc.com/examples/react/dist/');
     addTodo('todo1');
     completeTodo('todo1');
@@ -98,4 +99,18 @@ it.only('changes checkbox search timeout to 6 seconds', () => {
     todoCheckbox.should('be.checked');
 
     clearCompletedTodos();
+});
+
+// create test that will always fail to demonstrate headless test results
+it('this test should always fail (input toggle unchecked)', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/');
+    addTodo('todo1');
+    
+    
+    let todoCheckboxes = cy.get("[data-testid='todo-item-label']", {timeout: 6000});
+    let todoCheckbox = todoCheckboxes.contains('todo1')
+    .siblings("[data-testid='todo-item-toggle']");
+    todoCheckbox.should('be.checked');
+
+    removeTodo('todo1');
 });

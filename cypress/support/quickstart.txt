@@ -15,3 +15,13 @@ npm install cypress
 
 npx cypress open
 * open Cypress in UI mode
+
+npx cypress run
+* run Cypress in headless mode
+
+command line options:
+    --browser [name of browser]
+    * use a specific browser
+
+    --headed
+    * use with Cypress in 'run' mode to open a browser and observe tests
